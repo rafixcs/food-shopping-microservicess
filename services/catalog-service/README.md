@@ -1,13 +1,13 @@
-# catalog-service service
+# catalog service
 
-This service handles all catalog-service-related operations in the system.
+This service handles all catalog-related operations in the system.
 
 ## Architecture
 
 The service follows Clean Architecture principles with the following structure:
 
 ```
-services/catalog-service-service/
+services/catalog-service/
 ├── cmd/                    # Application entry points
 │   └── main.go            # Main application setup
 ├── internal/              # Private application code

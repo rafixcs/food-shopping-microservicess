@@ -1,13 +1,13 @@
-# user-service service
+# user service
 
-This service handles all user-service-related operations in the system.
+This service handles all user-related operations in the system.
 
 ## Architecture
 
 The service follows Clean Architecture principles with the following structure:
 
 ```
-services/user-service-service/
+services/user-service/
 ├── cmd/                    # Application entry points
 │   └── main.go            # Main application setup
 ├── internal/              # Private application code

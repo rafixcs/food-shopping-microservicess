@@ -1,13 +1,13 @@
-# order-service service
+# order service
 
-This service handles all order-service-related operations in the system.
+This service handles all order-related operations in the system.
 
 ## Architecture
 
 The service follows Clean Architecture principles with the following structure:
 
 ```
-services/order-service-service/
+services/order-service/
 ├── cmd/                    # Application entry points
 │   └── main.go            # Main application setup
 ├── internal/              # Private application code
