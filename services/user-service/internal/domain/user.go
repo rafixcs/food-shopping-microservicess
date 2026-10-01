@@ -49,6 +49,14 @@ type AddressModel struct {
 	CreatedAt time.Time `json:"created_at"`
 }
 
+type RegisterInput struct {
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+	Role     Role   `json:"role"`
+	Phone    string `json:"phone"`
+}
+
 type UserRepository interface {
 	CreateUser(ctx context.Context, u *UserModel) error
 	GetUserByEmail(ctx context.Context, email string) (*UserModel, error)
@@ -60,6 +68,6 @@ type UserRepository interface {
 }
 
 type UserService interface {
-	CreateUser(ctx context.Context, user UserModel) (*UserModel, error)
-	GetUser(ctx context.Context, userId string) (*UserModel, error)
+	Register(ctx context.Context, user RegisterInput) (*UserModel, error)
+	Login(ctx context.Context, email, password string) (string, error)
 }
